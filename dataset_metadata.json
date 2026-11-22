@@ -1,0 +1,35 @@
+{
+  "dataset_name": "ITSM-DevOps-15k",
+  "version": "1.0.0",
+  "domain": "Technology and Information Technology (IT)",
+  "subdomains": [
+    "Kubernetes Container Orchestration",
+    "Cloud Infrastructure & AWS Architecture",
+    "Linux Systems Administration & Kernel Diagnostics",
+    "DevOps CI/CD Pipelines & Infrastructure as Code (Terraform/Ansible)",
+    "Database Reliability Engineering (PostgreSQL/MySQL/Redis)",
+    "Enterprise Network Routing & Security Protocols"
+  ],
+  "total_records": 15200,
+  "splits": {
+    "train": 12160,
+    "validation": 1520,
+    "test": 1520
+  },
+  "schema": {
+    "id": "string (unique identifier, e.g., ITSM-2026-001)",
+    "domain": "string (specific IT subsystem)",
+    "severity": "string (P1-Critical, P2-High, P3-Medium, P4-Low)",
+    "dialogue_turns": "integer (number of conversation turns)",
+    "messages": "array of objects containing role ('system', 'user', 'assistant') and content (string)",
+    "target_commands": "array of strings (verified executable CLI commands or configurations)",
+    "root_cause_category": "string (e.g., Configuration Error, Resource Exhaustion, Permission Denial, Network Timeout)"
+  },
+  "licensing": "Research and Academic Use Only (Synthetic and Sanitized Enterprise Postmortem Logs)",
+  "anonymization": {
+    "ip_addresses": "Replaced with RFC 5737 documentation ranges (192.0.2.0/24, 198.51.100.0/24)",
+    "account_ids": "Masked with synthetic placeholders (e.g., 123456789012)",
+    "usernames": "Normalized to standard service accounts (e.g., devops-admin, app-svc)",
+    "api_keys": "Scrubbed with SHA-256 entropy filters and replaced with <SECRET_REDACTED>"
+  }
+}
